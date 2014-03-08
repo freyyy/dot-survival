@@ -23,14 +23,14 @@ public class expandable : MonoBehaviour {
 
 		//Acceleration control values.
 		sizeRatio = 0f;
-		acceleration = 0.0005f;
+		acceleration = 0.00005f;
 
 		//The object hasn't reached his full size.
 		maxSzieReached = false;
 
 		//Randomisation of grouth values.
-		minSize = 1; //min range
-		maxSizeScale = 8; //max range
+		minSize = 0.1f; //min range
+		maxSizeScale = 0.5f; //max range
 		//random generated range;
 		sizeToReach = (float)(minSize + Random.value * maxSizeScale);
 	}
