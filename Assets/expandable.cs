@@ -15,7 +15,6 @@ public class expandable : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
 		//inst = false;
 		size = transform.localScale;
 		size.x = 0.01f;
@@ -37,21 +36,19 @@ public class expandable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 		if (size.x < sizeToReach && !maxSzieReached)
 		{
 			size.x += sizeRatio;
 			size.y += sizeRatio;
-
 			sizeRatio += acceleration;
 
 			if(size.x >= sizeToReach)
 				maxSzieReached = true;
 		}
-		if (maxSzieReached && maxSzieReached) 
+		if (maxSzieReached) 
 		{
-			size.x -= sizeRatio;
-			size.y -= sizeRatio;
+			size.x += sizeRatio;
+			size.y += sizeRatio;
 			
 			sizeRatio -= acceleration;
 		}
